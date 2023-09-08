@@ -453,7 +453,7 @@ def launch(
     launch_args = {"server_port": port}
     if listen:
         launch_args["server_name"] = "0.0.0.0"
-    demo.queue(concurrency_count=1).launch(**launch_args)
+    demo.queue(concurrency_count=1).launch(**launch_args, share=True)
 
 
 def watch(
